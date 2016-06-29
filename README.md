@@ -1,12 +1,12 @@
 Code Snippets for Virtual Dom Brownbag
 --
- - virtual-dom-1 shows a simple render function that accepts a string argument
- - virtual-dom-2 shows the same function accepting an object with node name and attribute properties
- - virtual-dom-3 adds a children array property to the above object and recursion to the render function
+virtual-dom-1 shows a simple render function that accepts a string argument
+
+virtual-dom-2 shows the same function accepting an object with node name and attribute properties
+
+virtual-dom-3 adds a children array property to the above object and recursion to the render function
  
  **[Presentation Slides](http://slides.com/ryanmoore/deck-5)**
- 
- --
  
 Resources Used to Create this Presentation:
 
