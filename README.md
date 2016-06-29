@@ -8,6 +8,8 @@ virtual-dom-3 adds a children array property to the above object and recursion t
  
  **[Presentation Slides](http://slides.com/ryanmoore/deck-5)**
  
+--
+ 
 Resources Used to Create this Presentation:
 
 - [MDN: Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
