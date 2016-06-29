@@ -1,0 +1,16 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      const virtualNode = 'Virtual Node String';
+      const render = (virtualNode) => {
+          return document.createTextNode(virtualNode);
+      }
+      const node = render(virtualNode);
+      const container = document.getElementById('container');
+      container.appendChild(node);
+    </script>
+  </body>
+</html>

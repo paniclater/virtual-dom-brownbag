@@ -1,0 +1,27 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      const virtualNode = {
+        nodeAttributes: {
+          id: 'virtual-node-id'
+        },
+        nodeName: 'h1'
+      }
+      const render = (virtualNode) => {
+        const node = document.createElement(virtualNode.nodeName);
+        const nodeAttributes = virtualNode.nodeAttributes || {};
+
+        Object.keys(nodeAttributes).forEach( key => node.setAttribute(key, nodeAttributes[key]) );
+        return node;
+      }
+
+      const node = render(virtualNode);
+      const container = document.getElementById('container');
+
+      container.appendChild(node);
+    </script>
+  </body>
+</html>

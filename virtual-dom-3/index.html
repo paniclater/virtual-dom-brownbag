@@ -1,0 +1,33 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      const virtualNode = {
+        nodeAttributes: {
+          id: 'virtual-node-id'
+        },
+        nodeName: 'h1',
+        children: ['Virtual Header Text']
+      }
+      const render = (virtualNode) => {
+        if (virtualNode.split) {
+          return document.createTextNode(virtualNode);
+        }
+
+        const node = document.createElement(virtualNode.nodeName);
+        const nodeAttributes = virtualNode.nodeAttributes || {};
+
+        Object.keys(nodeAttributes).forEach( key => node.setAttribute(key, nodeAttributes[key]) );
+        (virtualNode.children || []).forEach( child => node.appendChild(render(child)) );
+        return node;
+      }
+
+      const node = render(virtualNode);
+      const container = document.getElementById('container');
+
+      container.appendChild(node);
+    </script>
+  </body>
+</html>
